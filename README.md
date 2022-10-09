@@ -12,6 +12,8 @@
 chcp 1251 - позволяет читать русские символы;
 if exist %way% - проверяет, существует ли указанный путь на компьютере;
 forfiles /P %way% /S /C "cmd /c if @fsize lss %size% echo @FILE" > resultbat1.2.txt
+    ~ way - задаваемый параметр пути;
+    ~ zise - задаваемый параметр размера;
     ~ forfiles - выполняет для определенной группы файлов;
     ~ /P - задает путь;
     ~ /S - выполнение программы для всех подпапок;
@@ -25,6 +27,8 @@ forfiles /P %way% /S /C "cmd /c if @fsize lss %size% echo @FILE" > resultbat1.2.
 ![bash](https://sun9-12.userapi.com/impg/qw4iPrkxRTkfCDdww67-cVF9KDsPeTwqzPsD1g/JqWxdDxwKvk.jpg?size=739x445&quality=96&sign=84237de9192adce8264df19e0b81489c&type=album)
 
 ```
+    ~ way - задаваемый параметр пути;
+    ~ f_size - задаваемый параметр размера;
     ~ if [ -d "$way" ] - проверяет, существует ли данный каталог или нет;
     ~ find "$way" - проводит поиск по определенному пути;
     ~ -size -@fsize - проверяет, меньше ли размер файла указанного значения;
